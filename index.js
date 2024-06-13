@@ -1,6 +1,6 @@
-var text = "H\nHeader\nParagraph of what is happening\nimg\nimage.png";
+var text;
 var selector = "p";
-
+var pin = 0;
 
 function getText() { //self explainitory
     var fs = require("fs");
@@ -16,26 +16,46 @@ function getNextParagraph(x) {
 test*/
 
 function nameItLater(x) {
-    switch (x) {
-        case "H":
-            getNextParagraph()
+    switch (text[pin]) {
+        case "H": //Selects header 1
             selector = "h1";
             break;
+        case "I": // Replaces image and alt 
+            pin += 1;
+            document.querySelector("img").src = text[pin];
+            pin += 1;
+            document.querySelector("img").alt = text[pin];
+            break;
         case "O":
-            getNextParagraph()
-
-
+            pin += 1;
+            document.getElementById("2").style.display = "none";
+            document.getElementById("3").style.display = "none";
+            document.getElementById("4").style.display = "none";
+            switch (text[pin]) {
+                case "4": 
+                    document.getElementById("2").style.display = "block";
+                    document.getElementById("3").style.display = "block";
+                    document.getElementById("4").style.display = "block";
+                break;
+                case "3":
+                    document.getElementById("2").style.display = "block";
+                    document.getElementById("3").style.display = "block";
+                    break;
+                case "2":
+                    document.getElementById("2").style.display = "block";
+                    break;
+                default:
+                    break;
+                }; 
+            break;
         default:
             document.querySelector(selector).innerHTML = x;
-            if (selector == "h1") {
-                selector = "p";
-            }
-            getNextParagraph(x)
             break;
         
     }
+    pin+=1;
 };
 
 
-req.addEventListener("load", getText);
+document.addEventListener("load", getText);
 
