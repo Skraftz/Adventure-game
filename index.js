@@ -1,21 +1,34 @@
-var text = "string";
-var line = "i";
-
+var text = "H\nHeader\nParagraph of what is happening\nimg\nimage.png";
+var selector = "p";
+var 
 function reqListener() {
     text = this.responseText;
 };
 
-function getNextParagraph() {
+function getNextParagraph(x) {
     text.replace(line, "");
 }
+/*test t
+test*/
 
-function nameItLater(string) {
-    switch (string) {
+function nameItLater(x) {
+    switch (x) {
         case "H":
             getNextParagraph()
-            document.querySelector("h1").innerHTML = "This is a test";
+            selector = "h1";
+            break;
+        case "O":
             getNextParagraph()
-            document.querySelector("p").innerHTML = "Another Test.";
+
+
+        default:
+            document.querySelector(selector).innerHTML = x;
+            if (selector == "h1") {
+                selector = "p";
+            }
+            getNextParagraph(x)
+            break;
+        
     }
 };
 

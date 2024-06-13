@@ -4,5 +4,6 @@ This amazing text adveture was made by Skraftz!
 O
 1
 Start!
-5
+8
+H
 Choose your class:
