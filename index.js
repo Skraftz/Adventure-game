@@ -2,7 +2,7 @@ let text;
 let selector = "p";
 let pin = 0;
 
-function getText() { //self explainitory
+async function getText() { //self explainitory
     let response = await fetch('https://skraftz.github.io/Adventure-game/file.txt');
     text = await response.text();
     let textByLine = text.split("\n");
