@@ -5,13 +5,13 @@ let pin = 0;
 function getText() { //self explainitory
     let response = await fetch('https://skraftz.github.io/Adventure-game/file.txt');
     text = await response.text();
-    let textByLine = text.split("\n")
+    let textByLine = text.split("\n");
     console.log(textByLine[0]);
 };
 
 function getNextParagraph(x) {
     text.replace(line, "");
-}
+};
 /*test t
 test*/
 
@@ -52,10 +52,10 @@ function nameItLater(x) {
             document.querySelector(selector).innerHTML = x;
             break;
         
-    }
+    };
     pin+=1;
 };
 
-console.log("I AM GOING TO BREAK")
+console.log("I AM GOING TO BREAK");
 getText();
 
