@@ -1,5 +1,6 @@
 H
 Welcome to the text adventure!
+p
 This amazing text adveture was made by Skraftz! 
 O
 1

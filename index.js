@@ -11,12 +11,6 @@ async function getText() { //self explainitory
     console.log(text);
 };
 
-function getNextParagraph(x) {
-    text.replace(line, "");
-};
-/*test t
-test*/
-
 function nameItLater(x) {
     switch (text[pin]) {
         case "H": //Selects header 1
@@ -27,6 +21,9 @@ function nameItLater(x) {
             document.querySelector("img").src = text[pin];
             pin += 1;
             document.querySelector("img").alt = text[pin];
+            break;
+        case "p":
+            selector = "p";
             break;
         case "O":
             pin += 1;
@@ -55,7 +52,7 @@ function nameItLater(x) {
             break;
         
     };
-    pin+=1;
+    pin += 1;
 };
 
 console.log("I AM GOING TO BREAK");
