@@ -1,8 +1,12 @@
 var text = "H\nHeader\nParagraph of what is happening\nimg\nimage.png";
 var selector = "p";
-var 
-function reqListener() {
-    text = this.responseText;
+
+
+function getText() { //self explainitory
+    var fs = require("fs");
+    text = fs.readFileSync("./mytext.txt", "utf-8");
+    var textByLine = text.split("\n")
+    console.log(textByLine[0]);
 };
 
 function getNextParagraph(x) {
@@ -33,9 +37,5 @@ function nameItLater(x) {
 };
 
 
-
-const req = new XMLHttpRequest();
-req.addEventListener("load", reqListener);
-req.open("GET", "file.txt"[1]);
-req.send();
+req.addEventListener("load", getText);
 
