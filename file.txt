@@ -1,0 +1,8 @@
+H
+Welcome to the text adventure!
+This amazing text adveture was made by Skraftz! 
+O
+1
+Start!
+5
+Choose your class:
