@@ -1,6 +1,6 @@
 function reqListener() {
     console.log(this.responseText);
-    var firstLine = text.split('\n').shift(); 
+    var firstLine = this.responseText.split('\n').shift(); 
     console.log(firstLine)
   }
   
