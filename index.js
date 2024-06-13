@@ -56,6 +56,6 @@ function nameItLater(x) {
     pin+=1;
 };
 
-
-document.addEventListener("load", getText);
+console.log("I AM GOING TO BREAK")
+getText();
 
