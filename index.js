@@ -1,11 +1,11 @@
-var text;
-var selector = "p";
-var pin = 0;
+let text;
+let selector = "p";
+let pin = 0;
 
 function getText() { //self explainitory
-    var fs = require("fs");
-    text = fs.readFileSync("./mytext.txt", "utf-8");
-    var textByLine = text.split("\n")
+    let response = await fetch('https://skraftz.github.io/Adventure-game/file.txt');
+    text = await response.text();
+    let textByLine = text.split("\n")
     console.log(textByLine[0]);
 };
 
