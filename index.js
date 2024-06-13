@@ -2,11 +2,13 @@ let text;
 let selector = "p";
 let pin = 0;
 
+
+
 async function getText() { //self explainitory
     let response = await fetch('https://skraftz.github.io/Adventure-game/file.txt');
-    text = await response.text();
-    let textByLine = text.split("\n");
-    console.log(textByLine[0]);
+    let sec = await response.text();
+    let text = sec.split("\n");
+    console.log(text);
 };
 
 function getNextParagraph(x) {
