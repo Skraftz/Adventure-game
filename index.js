@@ -92,15 +92,10 @@ function nameItLater() {
     };
 };
 
-console.log("I AM GOING TO BREAK");
+console.log("V0.4.4");
 getText();
 
 
-document.querySelectorAll('button').forEach(cell => {
-    cell.addEventListener('click', function() {
-      let cellId = this.id;
-      let theclass = this.className;
-      console.log(theclass);
-      // Call your function with the cellId variable
-    });
-  });
+document.getElementById('1').addEventListener('click', function(){
+    console.log(self.className);
+});
