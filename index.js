@@ -1,7 +1,7 @@
 let text;
 let selector = "p";
 let pin = 0;
-
+let send = [0,0,0,0];
 
 function button(number, src, alt) {
     document.getElementById(number).src = src;
@@ -10,22 +10,22 @@ function button(number, src, alt) {
 
 
 function ToggleButtons(Watch) {
+            document.getElementById("0").style.display = "block";
             document.getElementById("1").style.display = "none";
             document.getElementById("2").style.display = "none";
             document.getElementById("3").style.display = "none";
-            document.getElementById("4").style.display = "none";
             switch (Watch) {
                 case "4": 
+                    document.getElementById("1").style.display = "block";
                     document.getElementById("2").style.display = "block";
                     document.getElementById("3").style.display = "block";
-                    document.getElementById("4").style.display = "block";
                 break;
                 case "3":
+                    document.getElementById("1").style.display = "block";
                     document.getElementById("2").style.display = "block";
-                    document.getElementById("3").style.display = "block";
                     break;
                 case "2":
-                    document.getElementById("2").style.display = "block";
+                    document.getElementById("1").style.display = "block";
                     break;
                 default:
                     break;
@@ -71,15 +71,23 @@ function nameItLater() {
             break;
         case "O":
             pin += 1; ToggleButtons(text[pin]);//show buttons
-            let rep = Number(text[pin]);
-            let amm = 0;
-            while (rep > amm) {
-            amm += 1;
             pin += 1;
-            document.getElementById(String(amm)).innerHTML = text[pin];
+            document.getElementById('0').innerHTML = text[pin];
             pin += 1;
-            document.getElementById(String(amm)).className = text[pin];
-            };
+            send = Number(text[pin]);
+            pin += 1;
+            document.getElementById('1').innerHTML = text[pin];
+            pin += 1;
+            send = Number(text[pin]);
+            pin += 1;
+            document.getElementById('2').innerHTML = text[pin];
+            pin += 1;
+            send = Number(text[pin]);
+            pin += 1;
+            document.getElementById('3').innerHTML = text[pin];
+            pin += 1;
+            send = Number(text[pin]);
+            }
         //Show buttons//
             
             break;
@@ -92,7 +100,7 @@ function nameItLater() {
     };
 };
 
-console.log("V0.4.5");
+console.log("V0.4.6");
 getText();
 
 
