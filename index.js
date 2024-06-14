@@ -73,13 +73,13 @@ function nameItLater() {
             pin += 1; ToggleButtons(text[pin]);//show buttons
             let rep = Number(text[pin]);
             let amm = 0;
-            while (rep > amm);
+            while (rep > amm) {
             amm += 1;
             pin += 1;
             document.getElementById(String(amm)).innerHTML = text[pin];
             pin += 1;
             document.getElementById(String(amm)).className = text[pin];
-
+            };
         //Show buttons//
             
             break;
@@ -92,10 +92,10 @@ function nameItLater() {
     };
 };
 
-console.log("V0.4.4");
+console.log("V0.4.5");
 getText();
 
 
-document.getElementById('1').addEventListener('click', function(){
+document.getElementById('0').addEventListener('click', function(){
     console.log(self.className);
 });
