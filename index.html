@@ -3,17 +3,24 @@
     <head>
         <title>Game</title>
         <script src="index.js"></script>
+        <style>
+            body {
+                text-align: center;
+            }
+            div {
+                display: flex;
+            }
+        </style>
     </head>
     <body>
         <h1>This is a header</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/SMPTE_Color_Bars.svg">
+        <img id="img" src="https://upload.wikimedia.org/wikipedia/commons/6/66/SMPTE_Color_Bars.svg" alt = "">
         <p>This is a paragraph</p>
-        <img src="">
         <div>
-            <button id="0">Option 0</button>
-            <button id="1">Option 1</button>
-            <button id="2">Option 2</button>
-            <button id="3">Option 3</button>
+            <button onclick="run(0)" id="a">Option 0</button>
+            <button onclick="run(1)" id="b">Option 1</button>
+            <button onclick="run(2)" id="c">Option 2</button>
+            <button onclick="run(3)" id="d">Option 3</button>
         </div>
     </body>
 </html>

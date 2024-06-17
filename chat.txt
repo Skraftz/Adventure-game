@@ -1,0 +1,106 @@
+H
+Welcome to Adventure Game!
+p
+You find yourself standing at the entrance of a mysterious cave.
+I
+https://pics.craiyon.com/2023-10-21/36357bca2ae84adaa9a4e95092249867.webp
+Entrance of the cave
+O
+2
+Enter the cave
+15
+Turn back
+97
+end
+
+H
+Inside the Cave
+p
+You are now inside the dark cave. The air is cold and damp.
+I
+https://pics.craiyon.com/2023-09-27/af93ad1a5b5440588ad91a023fb81f42.webp
+Inside the cave
+O
+3
+Continue deeper into the cave
+34
+Search for a way out
+97
+Go back to the entrance
+1
+end
+
+H
+Deeper into the Cave
+p
+You venture deeper into the cave and encounter a fork in the path.
+I
+fork.jpg
+Fork in the cave
+O
+2
+Take the left path
+49
+Take the right path
+73
+end
+
+H
+Left Path
+p
+You take the left path and find a treasure chest.
+I
+treasure.jpg
+Treasure chest
+O
+1
+Open the chest
+61
+end
+
+H
+The Treasure
+p
+You open the chest and find a shiny sword!
+I
+sword.jpg
+Shiny sword
+O
+0
+end
+
+H
+Right Path
+p
+You take the right path and encounter a sleeping dragon.
+I
+dragon.jpg
+Sleeping dragon
+O
+1
+Sneak past the dragon
+87
+Tough the dragon
+tag
+end
+
+H
+Sneaking Past the Dragon
+p
+You carefully tiptoe past the sleeping dragon and find yourself outside the cave.
+I
+exit.jpg
+Outside the cave
+O
+0
+end
+H
+Staying away
+p
+You leave that cave behind.
+I
+exit.jpg
+Outside the cave
+O
+0
+end

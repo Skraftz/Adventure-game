@@ -2,9 +2,19 @@ H
 Welcome to the text adventure!
 p
 This amazing text adveture was made by Skraftz! 
+I
+https://media.istockphoto.com/id/1370996937/photo/man-stuffing-a-hot-dog-into-his-mouth.jpg?s=612x612&w=0&k=20&c=64zS-CNMk1wM3W2RWTVYNYGgf_gFJIoSuG7vFaUN85s=
+The british are being stupid again
 O
 1
 Start!
-8
+18
+Empty
+18
+Empty
+18
+Empty
+18
 H
 Choose your class:
+end

@@ -3,34 +3,41 @@ let selector = "p";
 let pin = 0;
 let send = [0,0,0,0];
 
-function button(number, src, alt) {
-    document.getElementById(number).src = src;
-    document.getElementById(number).alt = alt;
-}
+function imageuwu(xa, yb) {
+    document.getElementById("img").src = xa;pin += 1;
+    document.getElementById("img").alt = yb;
+    document.getElementById("img").style.height="500px";
+};
 
 
 function ToggleButtons(Watch) {
-            document.getElementById("0").style.display = "block";
-            document.getElementById("1").style.display = "none";
-            document.getElementById("2").style.display = "none";
-            document.getElementById("3").style.display = "none";
+            document.getElementById("a").style.display = "none";
+            document.getElementById("b").style.display = "none";
+            document.getElementById("c").style.display = "none";
+            document.getElementById("d").style.display = "none";
             switch (Watch) {
                 case "4": 
-                    document.getElementById("1").style.display = "block";
-                    document.getElementById("2").style.display = "block";
-                    document.getElementById("3").style.display = "block";
+                    document.getElementById("a").style.display = "block";
+                    document.getElementById("c").style.display = "block";
+                    document.getElementById("d").style.display = "block";
+                    document.getElementById("b").style.display = "block";
                 break;
                 case "3":
-                    document.getElementById("1").style.display = "block";
-                    document.getElementById("2").style.display = "block";
+                    document.getElementById("b").style.display = "block";
+                    document.getElementById("c").style.display = "block";
+                    document.getElementById("a").style.display = "block";
                     break;
                 case "2":
-                    document.getElementById("1").style.display = "block";
+                    document.getElementById("b").style.display = "block";
+                    document.getElementById("a").style.display = "block";
+                    break;
+                case "1":
+                    document.getElementById("a").style.display = "block";
                     break;
                 default:
                     break;
                 }; 
-}
+};
 
 
 
@@ -42,10 +49,11 @@ function ToggleButtons(Watch) {
 
 
 async function getText() { //self explainitory
-    let response = await fetch('https://skraftz.github.io/Adventure-game/file.txt');
-    let sec = await response.text();
-    text = sec.split("\n");
+    var response = await fetch('chat.txt');
+    var sec = await response.text();
+    text = sec.split("\r\n");
     console.log(text);
+    nameItLater();
 };
 
 
@@ -59,10 +67,8 @@ function nameItLater() {
             pin += 1; nameItLater();
             break;
         case "I": // Replaces image and alt 
-            pin += 1;
-            document.querySelector("img").src = text[pin];
-            pin += 1;
-            document.querySelector("img").alt = text[pin];
+            pin +=1;
+            imageuwu(text[pin], text[pin+1]);
             pin += 1; nameItLater();
             break;
         case "p":
@@ -72,24 +78,25 @@ function nameItLater() {
         case "O":
             pin += 1; ToggleButtons(text[pin]);//show buttons
             pin += 1;
-            document.getElementById('0').innerHTML = text[pin];
+            document.getElementById("a").innerHTML = text[pin];
             pin += 1;
-            send = Number(text[pin]);
+            send[0] = Number(text[pin]);
             pin += 1;
-            document.getElementById('1').innerHTML = text[pin];
+            document.getElementById("b").innerHTML = text[pin];
             pin += 1;
-            send = Number(text[pin]);
+            send[1] = Number(text[pin]);
             pin += 1;
-            document.getElementById('2').innerHTML = text[pin];
+            document.getElementById("c").innerHTML = text[pin];
             pin += 1;
-            send = Number(text[pin]);
+            send[2] = Number(text[pin]);
             pin += 1;
-            document.getElementById('3').innerHTML = text[pin];
+            document.getElementById("d").innerHTML = text[pin];
             pin += 1;
-            send = Number(text[pin]);
-            }
+            send[3] = Number(text[pin]);
         //Show buttons//
             
+            break;
+        case "end":
             break;
         default:
             document.querySelector(selector).innerHTML = text[pin];
@@ -100,10 +107,12 @@ function nameItLater() {
     };
 };
 
-console.log("V0.4.6");
+console.log("V0.4.8");
 getText();
 
 
-document.getElementById('0').addEventListener('click', function(){
-    console.log(self.className);
-});
+function run(intUwU){
+    pin = send[intUwU] - 1;
+    console.log(text[pin]);nameItLater();
+    return;
+};
