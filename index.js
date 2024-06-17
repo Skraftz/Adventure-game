@@ -107,7 +107,7 @@ function nameItLater() {
     };
 };
 
-console.log("V0.4.8");
+console.log("V0.5.0");
 getText();
 
 
