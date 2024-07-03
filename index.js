@@ -59,7 +59,6 @@ async function getText() { //self explainitory
 
 
 
-
 function nameItLater() {
     switch (text[pin]) {
         case "H": //Selects header 1
