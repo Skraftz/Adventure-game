@@ -51,7 +51,7 @@ function ToggleButtons(Watch) {
 async function getText() { //self explainitory
     var response = await fetch('chat.txt');
     var sec = await response.text();
-    text = sec.split("\r\n");
+    text = sec.split("\n");
     console.log(text);
     nameItLater();
 };
